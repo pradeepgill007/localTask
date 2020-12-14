@@ -1,0 +1,15 @@
+import { render } from '@testing-library/react';
+
+import Loading from './index';
+
+describe('Loading component', () => {
+  test('When loader is true', () => {
+
+    // render component
+    const { container } = render(<Loading />);
+
+    const loader = container.querySelector('.makeStyles-loader-1');
+    expect(loader).toBeInTheDocument();
+  });
+
+});
